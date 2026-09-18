@@ -91,7 +91,7 @@ jobs:
         run: echo "unit-test-${{matrix.test-group}}"
 
   deploy:
-    needs: [integration, lint, unit-test]
+    needs: [integration-1, integration-2, lint, unit-test]
     runs-on: ubuntu-latest
 
     steps:
